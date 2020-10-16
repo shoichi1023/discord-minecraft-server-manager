@@ -32,5 +32,6 @@ sed -ie "s/passthrough-player-counts: false/passthrough-player-counts: true/" co
 sed -ie "s/max-players: 100/max-players: 20/" config.yml
 cd ../Floodgate-bukkit
 sed -ir "s/username-prefix: \"*\"/username-prefix: \"_BE_\"/" config.yml
+cd ../../../script
 sudo cp ./resources/minecraft.conf /etc/init/
 sudo initctl reload-configuration
