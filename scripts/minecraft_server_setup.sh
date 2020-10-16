@@ -12,6 +12,7 @@ set timeout 60
 spawn java -Xms2G -Xmx2G -jar ./server.jar nogui
 expect -re \".*Timings Reset\"
 send \"\x03\"
+expect \".*Closing Server\"
 "
 cd ./plugins
 wget https://ci.nukkitx.com/job/GeyserMC/job/Floodgate/job/development/lastSuccessfulBuild/artifact/bukkit/target/floodgate-bukkit.jar
@@ -22,6 +23,7 @@ set timeout 60
 spawn java -Xms2G -Xmx2G -jar ./server.jar nogui
 expect -re \".*Timings Reset\"
 send \"\x03\"
+expect \".*Closing Server\"
 "
 cd ./plugins/Geyser-Spigot
 sed -ie "s/auth-type: online/auth-type: Floodgate/" config.yml
