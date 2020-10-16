@@ -31,10 +31,10 @@ sed -ie "s/command-suggestions: true/command-suggestions: false/" config.yml
 sed -ie "s/passthrough-motd: false/passthrough-motd: true/" config.yml
 sed -ie "s/passthrough-player-counts: false/passthrough-player-counts: true/" config.yml
 sed -ie "s/max-players: 100/max-players: 20/" config.yml
-cd ../Floodgate-bukkit
+cd ../floodgate-bukkit
 sed -ir "s/username-prefix: \"*\"/username-prefix: \"_BE_\"/" config.yml
-cd ../../../script
+cd ../../../discord-minecraft-server-manager/script
 cp ./minecraft_start.sh ~/app/
-sudo cp ./resources/minecraft.service /etc/systemd/
+sudo cp ./resources/minecraft.service /etc/systemd/system
 sudo systemctl daemon-reload
 sudo systemctl enable minecraft

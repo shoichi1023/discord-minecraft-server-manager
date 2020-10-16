@@ -6,3 +6,6 @@ After=network-online.target
 ExecStart=/home/username/app/minecraft_start.sh
 WorkingDirectory=/home/username/app
 Restart=always
+
+[Install]
+WantedBy=multi-user.target

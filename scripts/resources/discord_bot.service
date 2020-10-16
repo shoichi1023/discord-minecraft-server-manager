@@ -5,3 +5,6 @@ Description=Minecraft Server Manager
 ExecStart=/home/username/discord-minecraft-server-manager/scripts/bot_start.sh
 WorkingDirectory=/home/username/discord-minecraft-server-manager/scripts
 Restart=always
+
+[Install]
+WantedBy=multi-user.target
