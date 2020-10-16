@@ -1,0 +1,8 @@
+[Unit]
+Description=Minecraft Server
+After=network-online.target
+
+[Service]
+ExecStart=/home/username/app/minecraft_start.sh
+WorkingDirectory=/home/username/app
+Restart=always

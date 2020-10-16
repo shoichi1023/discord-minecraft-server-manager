@@ -1,0 +1,7 @@
+[Unit]
+Description=Minecraft Server Manager
+
+[Service]
+ExecStart=/home/username/discord-minecraft-server-manager/scripts/bot_start.sh
+WorkingDirectory=/home/username/discord-minecraft-server-manager/scripts
+Restart=always

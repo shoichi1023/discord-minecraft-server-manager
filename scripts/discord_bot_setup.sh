@@ -4,6 +4,6 @@ sudo apt update
 sudo apt install -y nodejs npm
 npm install
 cd ../scripts
-sudo cp ./resources/discord_bot.conf /etc/init
-sudo initctl reload-configuration
-sudo initctl start discord_bot
+sudo cp ./resources/discord_bot.service /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable discord_bot
