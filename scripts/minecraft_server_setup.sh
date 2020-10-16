@@ -7,7 +7,6 @@ mv download server.jar
 java -Xms2G -Xmx2G -jar server.jar
 sed -i -e "s/eula=false/eula=true/" eula.txt
 sed -i -e "s/difficulty=easy/difficulty=normal/" server.properties
-java -Xms2G -Xmx2G -jar server.jar nogui
 expect -c "
 set timeout 60
 spawn java -Xms2G -Xmx2G -jar ./server.jar nogui
